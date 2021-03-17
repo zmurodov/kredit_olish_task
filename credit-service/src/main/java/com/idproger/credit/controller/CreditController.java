@@ -114,6 +114,7 @@ public class CreditController {
             userCredit.setCreditPeriod(request.getCreditPeriod());
             userCredit.setStatus("active");
             userCredit.setUserPassportNumber(request.getUserPassport());
+            userCredit = userCreditService.saveUserCredit(userCredit);
 
 
             List<UserCreditCalc> calcs =  userCreditCalcService.calculateUserCredit(userCredit,user,credit);
@@ -135,6 +136,7 @@ public class CreditController {
             userCredit.setCreditPeriod(request.getCreditPeriod());
             userCredit.setStatus("active");
             userCredit.setUserPassportNumber(request.getUserPassport());
+            userCredit = userCreditService.saveUserCredit(userCredit);
 
             List<UserCreditCalc> calcs =  userCreditCalcService.calculateUserCredit(userCredit,user,credit);
 
